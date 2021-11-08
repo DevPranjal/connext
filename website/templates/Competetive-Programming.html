@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}Competetive Programming{% endblock %}
+{% block content%}
+<h1 align="center">People with this interest</h1>
+
+<table class="table w-50 mx-auto">
+  <thead>
+    <tr>
+      <th scope="col">First Name</th>
+      <th scope="col">Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for i in range(people|length) %}
+    <tr>
+      <td>{{ people[i].first_name }}</td>
+      <td>{{ people[i].email }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+<br />
+<h1 align="center">Resources</h1>
+
+<table class="table w-50 mx-auto">
+  <thead>
+    <tr>
+      <th scope="col">Platform</th>
+      <th scope="col">Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>CSES</td>
+      <td><a href="https://cses.fi/problemset/">https://cses.fi/problemset/</a></td>
+    </tr>
+    <tr>
+      <td>MIT OCW</td>
+      <td><a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-introduction-to-algorithms-sma-5503-fall-2005/">https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-introduction-to-algorithms-sma-5503-fall-2005/</a></td>
+    </tr>
+  </tbody>
+</table>
+{% endblock %}

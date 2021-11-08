@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}Finance{% endblock %}
+{% block content%}
+<h1 align="center">People with this interest</h1>
+
+<table class="table w-50 mx-auto">
+  <thead>
+    <tr>
+      <th scope="col">First Name</th>
+      <th scope="col">Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for i in range(people|length) %}
+    <tr>
+      <td>{{ people[i].first_name }}</td>
+      <td>{{ people[i].email }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+<br />
+<h1 align="center">Resources</h1>
+
+<table class="table w-50 mx-auto">
+  <thead>
+    <tr>
+      <th scope="col">Platform</th>
+      <th scope="col">Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Khan Academy</td>
+      <td><a href="https://www.khanacademy.org/economics-finance-domain/core-finance">https://www.khanacademy.org/economics-finance-domain/core-finance</a></td>
+    </tr>
+    <tr>
+      <td>Investopedia</td>
+      <td><a href="https://www.investopedia.com/">https://www.investopedia.com/</a></td>
+    </tr>
+  </tbody>
+</table>
+{% endblock %}

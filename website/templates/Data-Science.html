@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}Data Science{% endblock %}
+{% block content%}
+<h1 align="center">People with this interest</h1>
+
+<table class="table w-50 mx-auto">
+  <thead>
+    <tr>
+      <th scope="col">First Name</th>
+      <th scope="col">Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for i in range(people|length) %}
+    <tr>
+      <td>{{ people[i].first_name }}</td>
+      <td>{{ people[i].email }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+<br />
+<h1 align="center">Resources</h1>
+
+<table class="table w-50 mx-auto">
+  <thead>
+    <tr>
+      <th scope="col">Platform</th>
+      <th scope="col">Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Coursera</td>
+      <td><a href="https://www.coursera.org/specializations/data-science-python?ranMID=40328&ranEAID=je6NUbpObpQ&ranSiteID=je6NUbpObpQ-eAoA8Dje0LIUGifD34iUmQ&siteID=je6NUbpObpQ-eAoA8Dje0LIUGifD34iUmQ&utm_content=10&utm_medium=partners&utm_source=linkshare&utm_campaign=je6NUbpObpQ">Applied Data Science with Python Specialization (the University of Michigan)</a></td>
+    </tr>
+    <tr>
+      <td>Youtube</td>
+      <td><a href="https://www.youtube.com/playlist?list=PLRJdqdXieSHMtmKxr4s78F7U88l-SawAj">Introduction to Computational Thinking and Data Science</a></td>
+    </tr>
+  </tbody>
+</table>
+{% endblock %}

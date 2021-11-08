@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}Music{% endblock %}
+{% block content%}
+<h1 align="center">People with this interest</h1>
+
+<table class="table w-50 mx-auto">
+  <thead>
+    <tr>
+      <th scope="col">First Name</th>
+      <th scope="col">Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for i in range(people|length) %}
+    <tr>
+      <td>{{ people[i].first_name }}</td>
+      <td>{{ people[i].email }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+<br />
+<h1 align="center">Resources</h1>
+
+<table class="table w-50 mx-auto">
+  <thead>
+    <tr>
+      <th scope="col">Platform</th>
+      <th scope="col">Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Youtube</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Youtube</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+{% endblock %}
